@@ -13,12 +13,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp1
+namespace SudokuSolverApp
 {
     /// <summary>
     /// Logique d'interaction pour SodukuBox.xaml
     /// </summary>
-    public partial class SodukuBox : UserControl
+    public partial class SudokuBox : UserControl
     {
         /// <summary>
         /// Status
@@ -34,7 +34,7 @@ namespace WpfApp1
         /// <summary>
         /// Constructor
         /// </summary>
-        public SodukuBox()
+        public SudokuBox()
         {
             InitializeComponent();
         }

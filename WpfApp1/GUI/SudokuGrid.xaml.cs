@@ -13,22 +13,22 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp1
+namespace SudokuSolverApp
 {
     /// <summary>
     /// Logique d'interaction pour UserControl3.xaml
     /// </summary>
-    public partial class SodukuGrid : UserControl
+    public partial class SudokuGrid : UserControl
     {
         /// <summary>
         /// Constructor
         /// </summary>
-        public SodukuGrid()
+        public SudokuGrid()
         {
             InitializeComponent();
             foreach (var child in grid.Children)
             {
-                SodukuSubgrid subgrid = child as SodukuSubgrid;
+                SudokuSubgrid subgrid = child as SudokuSubgrid;
                 int nRow = Grid.GetRow(subgrid);
                 int nCol = Grid.GetColumn(subgrid);
                 subgrids[nRow, nCol] = subgrid;
@@ -64,9 +64,8 @@ namespace WpfApp1
             for (int i = 0; i < 9; ++i)
                 for (int j = 0; j < 9; ++j)
                     sodukuGrid[i,j] = this[i, j];
-            SodukuSolver solver = new SodukuSolver(sodukuGrid);
+            SudokuSolver solver = new SudokuSolver(sodukuGrid);
             solutions = solver.Solve();
-            Console.WriteLine(solutions.Count);
 
             //Grid is invalid
             if (solutions.Count != 1)
@@ -135,7 +134,7 @@ namespace WpfApp1
 
 
 
-        private SodukuSubgrid[,] subgrids = new SodukuSubgrid[3, 3];
+        private SudokuSubgrid[,] subgrids = new SudokuSubgrid[3, 3];
 
         private List<int[,]> solutions;
     }

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp1
+namespace SudokuSolverApp
 {
     /// <summary>
     /// Logique d'interaction pour MainWindow.xaml
@@ -27,13 +27,13 @@ namespace WpfApp1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            sodukuGrid.Solve();
+            sudokuGrid.Solve();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            sodukuGrid.Unlock();
-            sodukuGrid.Clear();
+            sudokuGrid.Unlock();
+            sudokuGrid.Clear();
         }
     }
 }
